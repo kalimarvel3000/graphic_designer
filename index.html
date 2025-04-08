@@ -30,22 +30,22 @@
 
   <!-- YouTube Thumbnails -->
   <section class="max-w-6xl mx-auto p-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-    <a href="https://youtu.be/fouNDGosgDQ" target="_blank" class="group">
+    <a href="https://youtu.be/fouNDGosgDQ" onclick="window.location='vnd.youtube:fouNDGosgDQ'; return false;" class="group">
       <img src="https://img.youtube.com/vi/fouNDGosgDQ/maxresdefault.jpg" alt="YT 1" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
-    <a href="https://youtu.be/UWRgJxDrG5s" target="_blank" class="group">
+    <a href="https://youtu.be/UWRgJxDrG5s" onclick="window.location='vnd.youtube:UWRgJxDrG5s'; return false;" class="group">
       <img src="https://img.youtube.com/vi/UWRgJxDrG5s/maxresdefault.jpg" alt="YT 2" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
-    <a href="https://youtu.be/nEUWaHRW0r8" target="_blank" class="group">
+    <a href="https://youtu.be/nEUWaHRW0r8" onclick="window.location='vnd.youtube:nEUWaHRW0r8'; return false;" class="group">
       <img src="https://img.youtube.com/vi/nEUWaHRW0r8/maxresdefault.jpg" alt="YT 3" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
-    <a href="https://youtu.be/lYyaOFeQ9W8" target="_blank" class="group">
+    <a href="https://youtu.be/lYyaOFeQ9W8" onclick="window.location='vnd.youtube:lYyaOFeQ9W8'; return false;" class="group">
       <img src="https://img.youtube.com/vi/lYyaOFeQ9W8/maxresdefault.jpg" alt="YT 4" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
-    <a href="https://youtu.be/MPTUA0jpDWs" target="_blank" class="group">
+    <a href="https://youtu.be/MPTUA0jpDWs" onclick="window.location='vnd.youtube:MPTUA0jpDWs'; return false;" class="group">
       <img src="https://img.youtube.com/vi/MPTUA0jpDWs/maxresdefault.jpg" alt="YT 5" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
-    <a href="https://youtu.be/wxEsBBhMV7k" target="_blank" class="group">
+    <a href="https://youtu.be/wxEsBBhMV7k" onclick="window.location='vnd.youtube:wxEsBBhMV7k'; return false;" class="group">
       <img src="https://img.youtube.com/vi/wxEsBBhMV7k/maxresdefault.jpg" alt="YT 6" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
     </a>
   </section>
@@ -64,9 +64,8 @@
   <!-- Hire Me Form -->
   <section class="max-w-md mx-auto mt-16 p-6 bg-gray-800 rounded-xl shadow-lg bg-opacity-90">
     <h2 class="text-xl font-semibold mb-4 text-center">Hire Me</h2>
-    <form action="https://formsubmit.co/kalivaraprasadmarvel@gmail.com" method="POST" class="space-y-4" onsubmit="return showPopup()">
+    <form action="https://formsubmit.co/kalivaraprasadmarvel@gmail.com" method="POST" class="space-y-4" onsubmit="handleAck(event)">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://kalimarvel3000.github.io/graphic_designer/">
       <input type="text" name="name" required placeholder="Your Name"
              class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400">
       <input type="email" name="email" required placeholder="Your Email"
@@ -74,25 +73,28 @@
       <textarea name="message" required placeholder="Your Message"
                 class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 h-32"></textarea>
       <button type="submit"
-        class="w-full bg-yellow-400 hover:bg-yellow-500 p-3 rounded font-semibold transition text-black">
+              class="w-full bg-yellow-400 hover:bg-yellow-500 p-3 rounded font-semibold transition text-black">
         Send Message
       </button>
     </form>
-    <div id="popup" class="hidden mt-4 text-green-400 text-center font-semibold">
-      Message sent! Thank you!
+    <div id="ack" class="hidden mt-4 text-green-400 text-center font-semibold">
+      ✅ Message sent! Thank you for contacting Kalimarvel3000.
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="text-center mt-16 mb-4 text-gray-400">
-    © 2025 KALIMARVEL3000 | Instagram:
+    © 2025 KALIMARVEL3000 | Instagram: 
     <a href="https://instagram.com/kalimarvel3000" class="text-blue-400" target="_blank">@kalimarvel3000</a>
   </footer>
 
   <script>
-    function showPopup() {
-      document.getElementById("popup").classList.remove("hidden");
-      return true;
+    function handleAck(e) {
+      e.preventDefault();
+      const form = e.target;
+      const ack = document.getElementById("ack");
+      ack.classList.remove("hidden");
+      setTimeout(() => form.submit(), 1000);
     }
   </script>
 </body>
