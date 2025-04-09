@@ -14,42 +14,61 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+
     a {
-      text-decoration: none;
+      text-decoration: none !important;
     }
-    a:hover {
-      text-decoration: none;
+
+    a:visited,
+    a:hover,
+    a:focus {
+      text-decoration: none !important;
+    }
+
+    a, h1 {
+      -webkit-user-drag: none;
+    }
+
+    /* Image popup styles */
+    #popupImage {
+      position: fixed;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+      z-index: 50;
+      display: none;
+    }
+
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 40;
+      display: none;
     }
   </style>
 </head>
 <body class="text-white min-h-screen font-sans backdrop-blur-md bg-black/70">
 
-  <!-- Modal -->
-<div id="modal" class="fixed inset-0 z-50 bg-black bg-opacity-70 hidden overflow-y-auto">
-  <div class="w-full flex justify-center mt-10">
-    <div class="relative">
-      <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/WhatsApp%20Image%202025-04-08%20at%2023.15.26_cef43fdf.jpg?raw=true"
-           alt="Full Profile"
-           class="max-w-full max-h-[90vh] rounded-xl shadow-lg border-4 border-white">
-      <button onclick="closeModal()"
-              class="absolute top-2 right-2 text-white bg-black/70 px-3 py-1 rounded-full text-sm hover:bg-red-600 transition">
-        ✕ Close
-      </button>
-    </div>
-  </div>
-</div>
-
+  <!-- Image Overlay -->
+  <div id="overlay" onclick="closeImage()"></div>
+  <img id="popupImage" onclick="closeImage()" />
 
   <!-- Header -->
   <header class="flex flex-wrap items-center justify-center gap-4 p-6 text-center">
     <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/WhatsApp%20Image%202025-04-08%20at%2023.15.26_cef43fdf.jpg?raw=true"
          alt="Profile Picture"
-         onclick="openModal()"
-         class="w-16 h-16 rounded-full object-cover border-2 border-white mx-auto sm:mx-0 cursor-pointer hover:scale-110 transition duration-300" />
+         onclick="openImage(this.src)"
+         class="w-16 h-16 rounded-full object-cover border-2 border-white mx-auto sm:mx-0 cursor-pointer" />
     <div>
-      <a href="https://instagram.com/kalimarvel3000" target="_blank" class="text-white no-underline hover:text-white cursor-pointer">
-        <h1 class="text-3xl sm:text-4xl font-bold tracking-widest uppercase">KALIMARVEL3000</h1>
-      </a>
+      <h1 onclick="window.open('https://instagram.com/kalimarvel3000', '_blank')"
+          class="text-3xl sm:text-4xl font-bold tracking-widest uppercase transition duration-300 cursor-pointer hover:text-yellow-400">
+        KALIMARVEL3000
+      </h1>
       <p class="text-gray-300 text-sm sm:text-base">Graphic Designer • Thumbnail Creator • YouTuber</p>
     </div>
   </header>
@@ -123,10 +142,9 @@
   <!-- Footer -->
   <footer class="text-center mt-16 mb-4 text-gray-400">
     © 2025 KALIMARVEL3000 | Instagram:
-    <a href="https://instagram.com/kalimarvel3000" class="text-blue-400 hover:text-blue-300 transition" target="_blank">@kalimarvel3000</a>
+    <a href="https://instagram.com/kalimarvel3000" class="text-blue-400 pointer-events-none"> @kalimarvel3000</a>
   </footer>
 
-  <!-- Scripts -->
   <script>
     function showAck() {
       setTimeout(() => {
@@ -134,14 +152,16 @@
       }, 500);
     }
 
-    function openModal() {
-      document.getElementById('modal').classList.remove('hidden');
+    function openImage(src) {
+      document.getElementById('popupImage').src = src;
+      document.getElementById('popupImage').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
     }
 
-    function closeModal() {
-      document.getElementById('modal').classList.add('hidden');
+    function closeImage() {
+      document.getElementById('popupImage').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
     }
   </script>
-
 </body>
 </html>
