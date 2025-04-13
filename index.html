@@ -3,164 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kalimarvel3000 | Graphic Designer</title>
+  <title>YouTube Thumbnails</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="https://github.com/kalimarvel3000/graphic_designer/blob/main/WhatsApp%20Image%202025-04-08%20at%2023.15.26_cef43fdf.jpg?raw=true" type="image/jpg">
-  <style>
-    body {
-      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjvWxaqVYZRALhMwI0xEA4NxMAh95lhBgqHA&s');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    @keyframes fadeSlideUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fadeSlideUp {
-      animation: fadeSlideUp 1s ease-out forwards;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      box-shadow: 0 0 10px #facc15;
-      border: 1px solid #facc15;
-    }
-  </style>
 </head>
-<body class="text-white min-h-screen font-sans backdrop-blur-md bg-black/70">
-
-  <!-- Header -->
-  <header class="flex flex-wrap items-center justify-center gap-4 p-6 text-center">
-    <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/WhatsApp%20Image%202025-04-08%20at%2023.15.26_cef43fdf.jpg?raw=true"
-         alt="Profile Picture"
-         onclick="openImage(this.src)"
-         class="w-16 h-16 rounded-full object-cover border-2 border-white mx-auto sm:mx-0 cursor-pointer transition-transform hover:scale-105" />
-    <div>
-      <h1 onclick="window.open('https://instagram.com/kalimarvel3000', '_blank')"
-          class="text-3xl sm:text-4xl font-bold tracking-widest uppercase cursor-pointer hover:text-yellow-400 transition-colors duration-300">
-        KALIMARVEL3000
-      </h1>
-      <p class="text-gray-300 text-sm sm:text-base">Graphic Designer • Thumbnail Creator • YouTuber</p>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <section class="max-w-6xl w-full grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    
+    <!-- Thumbnail 1 -->
+    <div onclick="openYouTube('fouNDGosgDQ')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/fouNDGosgDQ/maxresdefault.jpg" alt="YT 1" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
     </div>
-  </header>
 
- <!-- YouTube Thumbnails Without Bottom Tooltip -->
-<section class="max-w-6xl mx-auto p-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-  <div onclick="window.open('https://www.youtube.com/watch?v=fouNDGosgDQ', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/fouNDGosgDQ/maxresdefault.jpg" alt="YT 1" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-  <div onclick="window.open('https://www.youtube.com/watch?v=UWRgJxDrG5s', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/UWRgJxDrG5s/maxresdefault.jpg" alt="YT 2" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-  <div onclick="window.open('https://www.youtube.com/watch?v=nEUWaHRW0r8', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/nEUWaHRW0r8/maxresdefault.jpg" alt="YT 3" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-  <div onclick="window.open('https://www.youtube.com/watch?v=lYyaOFeQ9W8', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/lYyaOFeQ9W8/maxresdefault.jpg" alt="YT 4" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-  <div onclick="window.open('https://www.youtube.com/watch?v=MPTUA0jpDWs', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/MPTUA0jpDWs/maxresdefault.jpg" alt="YT 5" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-  <div onclick="window.open('https://www.youtube.com/watch?v=wxEsBBhMV7k', '_blank')" class="group cursor-pointer">
-    <img src="https://img.youtube.com/vi/wxEsBBhMV7k/maxresdefault.jpg" alt="YT 6" class="rounded-xl shadow-lg transition-transform group-hover:scale-105">
-  </div>
-</section>
-
-
-  <!-- Upcoming Videos -->
-  <section class="max-w-6xl mx-auto mt-16 px-4">
-    <h2 class="text-2xl font-bold mb-6 text-center">Upcoming Videos</h2>
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-      <div class="group cursor-pointer">
-        <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/asmrvideo.png?raw=true"
-             alt="Upcoming 1"
-             class="rounded-xl shadow-lg transition-transform group-hover:scale-105 w-full" />
-      </div>
-      <div class="group cursor-pointer">
-        <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/intestellar.png?raw=true"
-             alt="Upcoming 2"
-             class="rounded-xl shadow-lg transition-transform group-hover:scale-105 w-full" />
-      </div>
-      <div class="group cursor-pointer">
-        <img src="https://github.com/kalimarvel3000/graphic_designer/blob/main/vc2.png?raw=true"
-             alt="Upcoming 3"
-             class="rounded-xl shadow-lg transition-transform group-hover:scale-105 w-full" />
-      </div>
+    <!-- Thumbnail 2 -->
+    <div onclick="openYouTube('UWRgJxDrG5s')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/UWRgJxDrG5s/maxresdefault.jpg" alt="YT 2" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
     </div>
+
+    <!-- Thumbnail 3 -->
+    <div onclick="openYouTube('nEUWaHRW0r8')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/nEUWaHRW0r8/maxresdefault.jpg" alt="YT 3" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
+    </div>
+
+    <!-- Thumbnail 4 -->
+    <div onclick="openYouTube('lYyaOFeQ9W8')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/lYyaOFeQ9W8/maxresdefault.jpg" alt="YT 4" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
+    </div>
+
+    <!-- Thumbnail 5 -->
+    <div onclick="openYouTube('MPTUA0jpDWs')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/MPTUA0jpDWs/maxresdefault.jpg" alt="YT 5" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
+    </div>
+
+    <!-- Thumbnail 6 -->
+    <div onclick="openYouTube('wxEsBBhMV7k')" class="group cursor-pointer">
+      <img src="https://img.youtube.com/vi/wxEsBBhMV7k/maxresdefault.jpg" alt="YT 6" class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105">
+    </div>
+
   </section>
 
-  <!-- Hire Me Section -->
-  <section id="hireMe" class="max-w-md mx-auto mt-16 p-6 bg-gray-800 rounded-xl shadow-lg bg-opacity-90 opacity-0">
-    <h2 class="text-xl font-semibold mb-4 text-center">Hire Me</h2>
-    <form action="https://formsubmit.co/kalivaraprasadmarvel@gmail.com" method="POST" onsubmit="showAck()" class="space-y-4">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://kalimarvel3000.github.io/graphic_designer/">
-      <input type="text" name="name" required placeholder="Your Name"
-             class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 transition-all duration-300">
-      <input type="email" name="email" required placeholder="Your Email"
-             class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 transition-all duration-300">
-      <textarea name="message" required placeholder="Your Message"
-                class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 h-32 transition-all duration-300"></textarea>
-      <button type="submit"
-              class="w-full bg-yellow-400 hover:bg-yellow-500 p-3 rounded font-semibold transition-transform transform hover:scale-105 hover:shadow-lg text-black">
-        Send Message
-      </button>
-    </form>
-    <div id="ack" class="mt-4 text-green-400 font-semibold text-center hidden">
-      ✅ Message Sent for Kalimarvel3000!
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center mt-16 mb-4 text-gray-400">
-    © 2025 KALIMARVEL3000 | Instagram:
-    <a href="https://instagram.com/kalimarvel3000" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">@kalimarvel3000</a>
-  </footer>
-
-  <!-- Image Popup -->
-  <div id="overlay" onclick="closeImage()" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 hidden flex items-start justify-center pt-10">
-    <img id="popupImage" class="max-h-[80vh] rounded-xl shadow-lg" />
-  </div>
-
-  <!-- Scripts -->
   <script>
-    function showAck() {
-      setTimeout(() => {
-        document.getElementById('ack').classList.remove('hidden');
+    function openYouTube(videoId) {
+      const appUrl = `vnd.youtube://${videoId}`;
+      const webUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+      // Fallback to browser if app doesn’t open
+      const timeout = setTimeout(() => {
+        window.open(webUrl, '_blank');
       }, 500);
-    }
 
-    function openImage(src) {
-      document.getElementById('popupImage').src = src;
-      document.getElementById('popupImage').style.display = 'block';
-      document.getElementById('overlay').style.display = 'flex';
-    }
+      // Try to open in app
+      window.location.href = appUrl;
 
-    function closeImage() {
-      document.getElementById('popupImage').style.display = 'none';
-      document.getElementById('overlay').style.display = 'none';
+      // Clear fallback if app is opened
+      window.addEventListener('blur', () => {
+        clearTimeout(timeout);
+      });
     }
-
-    // Animation trigger on scroll
-    window.addEventListener('scroll', () => {
-      const hireSection = document.getElementById('hireMe');
-      const rect = hireSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        hireSection.classList.add('animate-fadeSlideUp');
-        hireSection.classList.remove('opacity-0');
-      }
-    });
   </script>
-
 </body>
 </html>
